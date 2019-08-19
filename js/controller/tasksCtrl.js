@@ -4,4 +4,8 @@ angular.module('app').controller('tasksCtrl',function(taskFactory) {
 	 	taskFactory.addTask(this.taskName);
 	 	this.taskName = '';
 	 }
+
+	 this.removeTask = function(tasks){
+	 	taskFactory.removeTask(tasks);
+	 }
 });

@@ -28,5 +28,10 @@ angular.module('app').factory('taskFactory',function(){
     });
   };
 
+  service.removeTask  = function(tasks){
+
+  	 _.pull(lists, tasks);
+  };
+
   return service;
 });
