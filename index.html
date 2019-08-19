@@ -11,25 +11,38 @@
 	 			ng-controller="tasksCtrl as tasksCtrl">
 	 		<div class="col-md-12">
 	 			<div class="row">
+
+	 				<div class="col-md-3">
+	 					<div class="row">
+	 						<form ng-submit="tasksCtrl.addTask()">
+	 							<input type="text"
+	 							 class="form-control"
+	 							  placeholder="новая карточка"
+	 							  ng-model="tasksCtrl.taskName">
+	 						</form>
+	 					</div>
+	 				</div>
+
 	 				<div class="col-md-3 " 
-	 						ng-repeat="tasks in tasksCtrl.list" >
+ 							ng-repeat="tasks in tasksCtrl.list" >
 	 						
 	 					<div class="row">
-	 						<div class="card"
-	 							>
+	 						<div class="card">
+	 							
 							  <div class="card-body">
 							    <h4 class="card-title">{{tasks.title}}</h4>
-							    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+							    	
 							    <p class="card-text">
 							      Some quick example text to build on the card title
 							      and make up the bulk of the card's content.
 							    </p>
-							    <a href="#!" class="card-link">Card link</a>
-							    <a href="#!" class="card-link">Another link</a>
+							    
+							    <button class="btn btn-primary">удалить</button>
 							  </div>
 							</div>
 	 					</div>
 	 				</div>
+	 				
 	 			</div>
 	 		</div>
 	 	</div>

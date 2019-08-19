@@ -5,20 +5,27 @@ angular.module('app').factory('taskFactory',function(){
   var lists = [
     {
       id: 1,
-      title: 'Todo'
+      title: 'Иванов'
     },
     {
       id: 2,
-      title: 'Doing'
+      title: 'Петров'
     },
     {
       id: 3,
-      title: 'Done'
+      title: 'Ковалев'
     }
   ];
 
   service.getTask = function () {
     return lists;
+  };
+
+  service.addTask = function(taskName){
+  	 lists.push({
+      id: _.uniqueId('list_'),
+      title: taskName
+    });
   };
 
   return service;
