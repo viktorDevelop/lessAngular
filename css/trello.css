@@ -1,0 +1,19 @@
+.remove{
+    width: 15px;
+    height: 15px;
+    background: url( ../img/x.svg);
+}
+
+.remove-list{
+  position : absolute;
+  margin: 6px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  top: 0;
+  right: 0;
+  font-weight: 700;
+  color: #205c7e;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none;
+}
